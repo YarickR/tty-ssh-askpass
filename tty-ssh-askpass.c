@@ -94,6 +94,7 @@ int main(int argc, char *argv[]) {
       case WEOF:
         stop = 1;
         break;
+      case L'\010':
       case L'\177':
         if (bufptr > 0) {
           fwprintf(stderr, L"\b \b");
